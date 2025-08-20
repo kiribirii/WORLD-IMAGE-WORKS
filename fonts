@@ -1,3 +1,7 @@
+/fonts
+   Avenir-Medium.ttf
+   Suisse_Intl_Bold.ttf
+
 @font-face {
   font-family: "Avenir";
   src: url("fonts/Avenir-Medium.ttf") format("truetype");
