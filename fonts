@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("fonts/Suisse_Intl_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root { --accent: #b30000; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #fff; color: #000; text-align: center; }
+
+/* Logo & nav */
+.header {
+  min-height: 70vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 2rem 1rem;
+}
+.logo { max-width: 520px; width: 48vw; height: auto; }
+.nav { margin-top: 1.2rem; display: grid; gap: .5rem; }
+.nav a {
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #000;
+}
+.nav a:hover { color: var(--accent); }
+
+/* Content pages */
+main {
+  max-width: 760px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+  text-align: left;
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 16px; /* ~12pt */
+  letter-spacing: 0.3em; /* spacing */
+  line-height: 1.6;
+}
+main h2 { font-size: 16px; font-weight: 700; margin-bottom: 1.5rem; }
