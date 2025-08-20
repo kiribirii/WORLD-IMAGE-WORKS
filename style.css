@@ -14,14 +14,16 @@ body {
 .logo { max-width: 520px; width: 48vw; height: auto; }
 .nav { margin-top: 1.2rem; display: grid; gap: .5rem; }
 .nav a {
-  display: inline-block;
-  padding: .5rem 1rem;
-  font-weight: 700;
-  letter-spacing: .06em;
+  display: block;
+  font-size: 0.8rem;   /* smaller text */
+  font-weight: 600;
   text-decoration: none;
   color: #000;
-  border: 1px solid #000;
-  border-radius: 999px;
+  margin: 0.3rem 0;
+}
+
+.nav a:hover {
+  color: var(--accent); /* red on hover */
 }
 .nav a:hover { border-color: var(--accent); color: var(--accent); }
 main { padding: 3rem 1rem 4rem; max-width: 860px; margin: 0 auto; line-height: 1.6; }
