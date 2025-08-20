@@ -28,3 +28,37 @@ body {
 .nav a:hover { border-color: var(--accent); color: var(--accent); }
 main { padding: 3rem 1rem 4rem; max-width: 860px; margin: 0 auto; line-height: 1.6; }
 .footer { padding: 2rem 1rem; border-top: 1px solid #eee; font-size: .85rem; color: #666; }
+/* Font styling for all main page content */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  text-align: left;
+  font-family: "Avenir", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 16px; /* ~12pt */
+  letter-spacing: 0.3em; /* space between letters */
+  line-height: 1.6;
+}
+
+main h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation links (Suiss International Bold) */
+.nav a {
+  display: block;
+  font-family: "Suiss International", sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #000;
+  margin: 0.25rem 0;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
