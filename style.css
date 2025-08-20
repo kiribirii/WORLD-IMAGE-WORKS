@@ -1,5 +1,21 @@
-/* Minimal shared styles */
-:root { --accent: #b30000; } /* red similar to your brackets */
+/* Step 1: Font-face declarations at the very top */
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("fonts/Suisse_Intl_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Step 2: General base styles */
+:root { --accent: #b30000; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
@@ -13,52 +29,36 @@ body {
 }
 .logo { max-width: 520px; width: 48vw; height: auto; }
 .nav { margin-top: 1.2rem; display: grid; gap: .5rem; }
-.nav a {
-  display: block;
-  font-size: 0.8rem;   /* smaller text */
-  font-weight: 600;
-  text-decoration: none;
-  color: #000;
-  margin: 0.3rem 0;
-}
-
-.nav a:hover {
-  color: var(--accent); /* red on hover */
-}
-.nav a:hover { border-color: var(--accent); color: var(--accent); }
-main { padding: 3rem 1rem 4rem; max-width: 860px; margin: 0 auto; line-height: 1.6; }
 .footer { padding: 2rem 1rem; border-top: 1px solid #eee; font-size: .85rem; color: #666; }
-/* Font styling for all main page content */
+
+/* Step 3: Main page content styles (Avenir Medium) */
 main {
   max-width: 760px;
   margin: 0 auto;
   padding: 5rem 1rem;
   text-align: left;
   font-family: "Avenir", sans-serif;
-  font-weight: 500; /* Medium */
+  font-weight: 500;
   font-size: 16px; /* ~12pt */
-  letter-spacing: 0.3em; /* space between letters */
+  letter-spacing: 0.3em;
   line-height: 1.6;
 }
-
 main h2 {
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0.3em;
   margin-bottom: 1.5rem;
 }
 
-/* Navigation links (Suiss International Bold) */
+/* Step 4: Navigation link styles (Suisse Intl Bold) */
 .nav a {
   display: block;
-  font-family: "Suiss International", sans-serif;
-  font-weight: 700; /* Bold */
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.05em;
   text-decoration: none;
   color: #000;
   margin: 0.25rem 0;
 }
-
-.nav a:hover {
-  color: var(--accent);
-}
+.nav a:hover { color: var(--accent); }
