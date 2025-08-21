@@ -1,127 +1,112 @@
-/* Step 1: Font-face declarations at the very top */
-@font-face {
-  font-family: "Avenir";
-  src: url("fonts/Avenir-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
+/* ---- Base ---- */
+:root{
+  --text:#111;
+  --accent:#990000; /* red for parentheses */
 }
-@font-face {
-  font-family: "Suisse Intl";
-  src: url("fonts/Suisse_Intl_Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-/* Step 2: General base styles */
-:root { --accent: #b30000; }
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #fff; color: #000; text-align: center;
-}
-.header {
-  min-height: 70vh;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  padding: 2rem 1rem;
-}
-.logo { max-width: 520px; width: 48vw; height: auto; }
-.nav { margin-top: 1.2rem; display: grid; gap: .5rem; }
-.footer { padding: 2rem 1rem; border-top: 1px solid #eee; font-size: .85rem; color: #666; }
-
-main {
-  max-width: 760px;
-  margin: 5rem auto;
-  padding: 0 1rem;
-  font-family: "Avenir", sans-serif;
-  font-size: 16px;  
-  font-weight: 500;
-  line-height: 1.8;
-  letter-spacing: normal;  /* remove huge spacing */
-  text-align: left;
+*{box-sizing:border-box}
+html,body{height:100%}
+html{font-size:16px;} /* 12pt ≈ 16px */
+body{
+  margin:0;
+  color:var(--text);
+  background:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,"Noto Sans",sans-serif;
+  line-height:1.35;
+  letter-spacing:0; /* keep tracking tight */
 }
 
-main h2 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em; /* just a touch for headings */
+/* Links */
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---- Home ---- */
+.centerwrap{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
 }
 
-
-/* Step 4: Navigation link styles (Suisse Intl Bold) */
-.nav a {
-  display: block;
-  font-family: "Suisse Intl", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  color: #000;
-  margin: 0.25rem 0;
+.brand{
+  font-weight:700;
+  /* size closely matches your comp on common laptops */
+  font-size: clamp(28px, 4.4vw, 56px);
+  letter-spacing:0.08em;          /* subtle spacing, not wide */
+  text-transform:uppercase;
+  word-spacing:0.08em;
 }
-.nav a:hover { color: var(--accent); }
-/* Styling for about, services, contact pages */
-main {
-  max-width: 760px;
-  margin: 5rem auto;
-  padding: 0 1rem;
-  font-family: "Avenir", sans-serif;
-  font-size: 16px;  /* ~12pt */
-  font-weight: 500;
-  letter-spacing: 0.3em; /* 30 spacing */
-  line-height: 1.8;
-  text-align: left;
+.brand .accent{ color:var(--accent); }
+
+.nav{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.nav a{
+  font-size:12px;                 /* tiny, all caps */
+  letter-spacing:0.22em;
+  text-transform:uppercase;
 }
 
-main h2 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 2rem;
+/* ---- Text page (About) ---- */
+.page{
+  padding: 56px 64px;             /* top-left airy margin like your mock */
+  max-width: 980px;
 }
-/* ---------- Sub-pages (About / Services / Contact) ---------- */
-
-/* cancel the homepage centering on subpages */
-body.subpage { text-align: left; }
-
-/* main text block: Avenir Medium, 12pt (~16px), normal tracking, 
-   positioned like your mock (top-left with generous margins) */
-body.subpage main {
-  font-family: "Avenir", sans-serif;
-  font-weight: 500;          /* Medium */
-  font-size: 16px;           /* ~12pt */
-  line-height: 1.65;
-  letter-spacing: normal;    /* remove wide tracking */
-  /* layout to match sample: left-aligned block, not centered */
-  max-width: none;           /* let it span naturally */
-  margin: 60px 48px 120px;   /* top, left/right, bottom */
-  padding: 0;                /* no inner padding */
+.page h1{
+  margin:0 0 14px 0;
+  font-size:16px;                 /* 12pt header on About */
+  font-weight:700;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+.page p{
+  margin:0 0 12px 0;
+  font-size:16px;                 /* strict 12pt body */
+  font-weight:400;
+  letter-spacing:0;               /* keep tracking tight */
 }
 
-/* heading: small, bold, very light tracking like your sample */
-body.subpage h2 {
-  font-family: "Avenir", sans-serif;
-  font-weight: 700;
-  font-size: 16px;           /* same size as body in your layout */
-  letter-spacing: 0.02em;    /* tiny, subtle */
-  margin: 0 0 16px;
+/* ---- Services ---- */
+.fullcenter{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+}
+.stack{display:flex;flex-direction:column;align-items:center;gap:18px}
+.small{font-size:14px}
+.services-list{list-style:none;margin:0;padding:0}
+.services-list li{line-height:1.5}
+
+/* bottom line on Services */
+.bottom-note{
+  position:fixed;
+  bottom:28px;
+  left:0; right:0;
+  text-align:center;
+  font-size:14px;
 }
 
-/* tidy paragraph spacing */
-body.subpage main p { margin: 0 0 14px; }
+/* ---- Contact ---- */
+.contact{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.contact .block{display:flex;flex-direction:column;gap:6px}
+.contact .email{font-size:14px}
+.contact .city{font-size:12px}
 
-/* ensure emphasis looks right */
-body.subpage main strong { font-weight: 700; }
-body.subpage main em     { font-style: italic; }
-
-/* absolutely remove any stray wide-tracking that might remain */
-body.subpage main, 
-body.subpage main p, 
-body.subpage main li, 
-body.subpage main strong, 
-body.subpage main em, 
-body.subpage main h2 {
-  letter-spacing: normal !important;
+/* ---- Small screens ---- */
+@media (max-width:600px){
+  .page{padding:40px 22px; max-width: 100%;}
+  .nav a{letter-spacing:0.18em}
 }
