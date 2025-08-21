@@ -2,17 +2,22 @@
    FONTS — pick the RIGHT paths
    =========================== */
 
-/* CASE A: styles.css is in the REPO ROOT (same level as /fonts) */
-@font-face{
-  font-family:"Avenir";
-  src:url("./fonts/Avenir-Medium.ttf") format("truetype");
-  font-style:normal; font-weight:500; font-display:swap;
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
 }
-@font-face{
-  font-family:"Suisse Intl";
-  src:url("./fonts/Suisse_Intl_Bold.ttf") format("truetype");
-  font-style:normal; font-weight:700; font-display:swap;
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/Suisse_Intl_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
+
 
 /* 
 CASE B: styles.css is inside /assets (comment CASE A out and use this)
