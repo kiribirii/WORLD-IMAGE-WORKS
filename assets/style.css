@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Avenir";
-  src: url("../Avenir-Medium.ttf") format("truetype"); /* root copy */
+  src: url("../fonts/Avenir-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Suisse Intl";
-  src: url("../Suisse_Intl_Bold.ttf") format("truetype"); /* root copy */
+  src: url("../fonts/Suisse_Intl_Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
