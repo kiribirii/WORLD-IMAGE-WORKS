@@ -1,7 +1,6 @@
 /* ===========================
-   FONTS — pick the RIGHT paths
+   FONTS
    =========================== */
-
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir-Medium.ttf") format("truetype");
@@ -18,34 +17,6 @@
   font-display: swap;
 }
 
-
-/* 
-CASE B: styles.css is inside /assets (comment CASE A out and use this)
-@font-face{
-  font-family:"Avenir";
-  src:url("../fonts/Avenir-Medium.ttf") format("truetype");
-  font-style:normal; font-weight:500; font-display:swap;
-}
-@font-face{
-  font-family:"Suisse Intl";
-  src:url("../fonts/Suisse_Intl_Bold.ttf") format("truetype");
-  font-style:normal; font-weight:700; font-display:swap;
-}
-*/
-
-/* CASE C: CSS is inline in each HTML page (comment A/B out and use this)
-@font-face{
-  font-family:"Avenir";
-  src:url("fonts/Avenir-Medium.ttf") format("truetype");
-  font-style:normal; font-weight:500; font-display:swap;
-}
-@font-face{
-  font-family:"Suisse Intl";
-  src:url("fonts/Suisse_Intl_Bold.ttf") format("truetype");
-  font-style:normal; font-weight:700; font-display:swap;
-}
-*/
-
 /* ===========================
    BASE
    =========================== */
@@ -54,57 +25,83 @@ CASE B: styles.css is inside /assets (comment CASE A out and use this)
 html, body { margin:0; padding:0; }
 html { font-size:16px; } /* 12pt */
 body {
-  background:#fff; color:#000;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  background:#fff;
+  color:#000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===========================
    HOME: header + nav
    =========================== */
-.header{
+.header {
   min-height:70vh;
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   padding:2rem 1rem;
   text-align:center; /* center only the home header */
 }
-.logo{ max-width:520px; width:48vw; height:auto; }
 
-.nav{ margin-top:1.2rem; display:grid; gap:.5rem; }
-.nav a{
+.logo {
+  max-width:520px;
+  width:48vw;
+  height:auto;
+}
+
+.nav {
+  margin-top:1.2rem;
+  display:grid;
+  gap:.5rem;
+}
+
+.nav a {
   font-family:"Avenir", "Helvetica Neue", Arial, sans-serif;
   font-weight:500;
-  font-size:12px;                    /* small like the comp */
-  letter-spacing:0.12em;             /* subtle tracking — tweak 0.08–0.16 */
+  font-size:12px;             /* small like the comp */
+  letter-spacing:0.12em;      /* subtle tracking */
   text-transform:uppercase;
-  text-decoration:none; color:#000;
+  text-decoration:none;
+  color:#000;
 }
-.nav a:hover{ color:var(--accent); }
+
+.nav a:hover { color:var(--accent); }
 
 /* ===========================
    TEXT PAGES (About/Services/Contact)
    =========================== */
-main{
+main {
   max-width:760px;
   margin:5rem auto;
   padding:0 1rem;
   text-align:left;
   font-family:"Avenir", "Helvetica Neue", Arial, sans-serif;
   font-weight:500;
-  font-size:16px;     /* ~12pt */
-  letter-spacing:0;   /* IMPORTANT: tight like your mock */
+  font-size:16px;   /* ~12pt */
+  letter-spacing:0; /* tight tracking like your mock */
   line-height:1.5;
 }
-main h1, main h2{
+
+main h1,
+main h2 {
   font-family:"Suisse Intl", "Helvetica Neue", Arial, sans-serif;
   font-weight:700;
-  font-size:16px;     /* header same size as body per your comp */
+  font-size:16px;   /* header same size as body */
   letter-spacing:0.02em;
   text-transform:uppercase;
   margin:0 0 1.2rem 0;
 }
 
-/* small footer note on Services (if needed) */
-.bottom-note{
-  position:fixed; left:0; right:0; bottom:28px;
-  text-align:center; font-family:"Avenir",sans-serif; font-size:14px;
+/* ===========================
+   SERVICES footer note
+   =========================== */
+.bottom-note {
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:28px;
+  text-align:center;
+  font-family:"Avenir", sans-serif;
+  font-size:14px;
 }
