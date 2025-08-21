@@ -81,3 +81,47 @@ main h2 {
   font-weight: 700;
   margin-bottom: 2rem;
 }
+/* ---------- Sub-pages (About / Services / Contact) ---------- */
+
+/* cancel the homepage centering on subpages */
+body.subpage { text-align: left; }
+
+/* main text block: Avenir Medium, 12pt (~16px), normal tracking, 
+   positioned like your mock (top-left with generous margins) */
+body.subpage main {
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;          /* Medium */
+  font-size: 16px;           /* ~12pt */
+  line-height: 1.65;
+  letter-spacing: normal;    /* remove wide tracking */
+  /* layout to match sample: left-aligned block, not centered */
+  max-width: none;           /* let it span naturally */
+  margin: 60px 48px 120px;   /* top, left/right, bottom */
+  padding: 0;                /* no inner padding */
+}
+
+/* heading: small, bold, very light tracking like your sample */
+body.subpage h2 {
+  font-family: "Avenir", sans-serif;
+  font-weight: 700;
+  font-size: 16px;           /* same size as body in your layout */
+  letter-spacing: 0.02em;    /* tiny, subtle */
+  margin: 0 0 16px;
+}
+
+/* tidy paragraph spacing */
+body.subpage main p { margin: 0 0 14px; }
+
+/* ensure emphasis looks right */
+body.subpage main strong { font-weight: 700; }
+body.subpage main em     { font-style: italic; }
+
+/* absolutely remove any stray wide-tracking that might remain */
+body.subpage main, 
+body.subpage main p, 
+body.subpage main li, 
+body.subpage main strong, 
+body.subpage main em, 
+body.subpage main h2 {
+  letter-spacing: normal !important;
+}
