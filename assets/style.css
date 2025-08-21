@@ -38,31 +38,25 @@ a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
 .accent{color:var(--accent)}
 
-/* ===========================
-   HOME
-   =========================== */
+/* HOME */
 .home{
   min-height:100vh;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
-  gap:28px; text-align:center;
-}
-.brand{
-  font-family:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  word-spacing:0.08em;
-  font-size:clamp(28px,4.4vw,56px);
+  gap:18px;               /* was 28px – moves menu closer to logo */
+  text-align:center;
 }
 .nav{
   display:flex; flex-direction:column; align-items:center; gap:8px;
 }
 .nav a{
+  font-family:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif; /* was Avenir */
+  font-weight:700;       /* bold like your mock */
   font-size:12px;
   letter-spacing:0.22em;
   text-transform:uppercase;
 }
+
 
 /* ===========================
    ABOUT (top-left text block)
